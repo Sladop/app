@@ -1,3 +1,5 @@
+import 'package:uuid/uuid.dart';
+
 class Participant {
   final String id;
 
@@ -7,7 +9,7 @@ class Participant {
     return Participant._(Uuid().v4());
   }
 
-  @Override
+  @override
   String toString() => '$id';
 
 }
