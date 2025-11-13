@@ -13,12 +13,13 @@ class Step {
 class Experiment {
   final String name;
   final String description;
-  final List<Step> steps = [];
+  final List<Step> steps;
   int? id;
 
   Experiment({
     required this.name,
     required this.description,
+    required this.steps,
     this.id,
   });
 }
