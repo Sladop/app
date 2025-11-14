@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:open_wearable/apps/YML_tracker/model/Experiment/Experiment.dart';
 import 'package:yaml/yaml.dart';
 
+
 class ExperimentParser {
 
   YamlMap _loadYamlFile(String path) {
@@ -22,8 +23,14 @@ class ExperimentParser {
     return yamlData;
   }
 
-
-  parseToExperiment(String path) {
+  /// Parss path to instaz of Eexperiment with information providd in the YAML File of the path.
+  ///
+  /// Parameter:
+  /// String path: pth to the YAML file that shoudl be converted.
+  ///
+  /// Rückgabewert:
+  /// [void]
+  void parseToExperiment(String path) {
     YamlMap map = _loadYamlFile(path);
     YamlMap processes = map['process'];
     List<Step> expSteps = [];
@@ -38,12 +45,13 @@ class ExperimentParser {
 
   }
 
+///   Exp: Test
+///   Desc: Tst
+///   Process:
+///   Schritt1:
+///     description: Links tippen
+///     repetition: 4
 
-  Exp: Test
-  Desc: Tst
-  Process:
-  Schritt1:
-    description: Links tippen
-    repetition: 4
+
 
 }
