@@ -30,7 +30,7 @@ class ExperimentParser {
   ///
   /// Rückgabewert:
   /// [void]
-  void parseToExperiment(String path) {
+  void parseYamlToExperiment(String path) {
     YamlMap map = _loadYamlFile(path);
     YamlMap processes = map['process'];
     List<Step> expSteps = [];
@@ -42,6 +42,10 @@ class ExperimentParser {
     });
     Experiment(name: map['Exp'], description: map['Desc'], steps: expSteps);
 
+
+  }
+
+  void parseExperimentToCSV(Experiment exp) {
 
   }
 
